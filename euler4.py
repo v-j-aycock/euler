@@ -9,19 +9,17 @@ while x>99 and y>99:
     productStr=str(x*y)
     print(productStr)
     while z < int((len(productStr)-1)/2)+1:
-        if len(trueList) == len(productStr) and 0 not in trueList:
-            print(x,'*',y,"=",productStr)
-            sys.exit()
-        elif 0 in trueList:
+        if 0 in trueList:
             z+=20
         elif productStr[z] == productStr[-z-1]:
             trueList.append(1)
             z+=1
+            if 0 not in trueList and len(trueList) == int(len(str(productStr))/2):
+                print(x,'*',y,'=',x*y)
         else:
             trueList.append(0)
             z+=1
     print(trueList)
-
     if y>=x:
         y-=1
     if x>y:
