@@ -6,4 +6,3 @@ def prime(targetNum):
             return 0
         sqrNum-=1
     return 1
-print(prime(int(input())))
