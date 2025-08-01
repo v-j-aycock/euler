@@ -15,7 +15,5 @@ while x > 0:
     sumList.append(x)
     x-=1
 squaredSums=(sum(sumList)**2)
-print(squareList)
-print(sumList)
 print('squared sum: ', squaredSums)
 print('difference = ', squaredSums-sumSquares)
