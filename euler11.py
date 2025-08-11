@@ -34,7 +34,7 @@ while x < 20:
                 four+=4
         if math.prod(multiplyList) > currentHighest:
             currentHighest = math.prod(multiplyList)
-            print(currentHighest)
+            highestList = multiplyList
     x+=1
 #this is our verticals. basically just switching n and y.
 x = 0
@@ -50,6 +50,7 @@ while x < 20:
         print(multiplyList)
         if math.prod(multiplyList) > currentHighest:
             currentHighest = math.prod(multiplyList)
+            highestList = multiplyList
     x+=1    
 #diagonals are gonna be harder. we have to take x and y coords and add to both (or add to one and subtract from one) but be aware of BOTH edges instead of just one.
 for x in range(len(matrix)):
@@ -64,6 +65,7 @@ for x in range(len(matrix)):
                     four+=4
             if math.prod(multiplyList) > currentHighest:
                 currentHighest = math.prod(multiplyList)
+                highestList = multiplyList
         if x+3 < 20:
             multiplyList = []
             four = 0
@@ -74,5 +76,7 @@ for x in range(len(matrix)):
                     four+=4
             if math.prod(multiplyList) > currentHighest:
                 currentHighest = math.prod(multiplyList)
+                highestList = multiplyList
     print(multiplyList)
 print(currentHighest)
+print(highestList)
