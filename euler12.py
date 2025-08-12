@@ -3,9 +3,11 @@ import math
 targetNum = int(input())
 n = 1
 listFactors = set()
+#using a list here so I can see the factors
 while len(listFactors) < targetNum:
     listFactors = set()
     divider=1
+    #get triangular number, i chose to use formula over addition. the highest factor with a counterpart will be less than the square root of the initial number.
     triangle = n*(n+1)/2
     while divider <= math.sqrt(triangle):
         if triangle % divider == 0:
