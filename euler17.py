@@ -18,7 +18,9 @@ for x in range(1,1001):
             numberStrngs.append(numberDict[int(str(x)[n])])
         n-=1
     if len(str(x)) == 3:
-        numberStrngs.append('hundredand')
+        numberStrngs.append('hundred')
+        if str(x)[-2:]!= '00':
+            numberStrngs.append('and')
     if len(str(x)) == 4:
         numberStrngs.append('thousand')
 print(numberStrngs)
