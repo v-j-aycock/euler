@@ -8,7 +8,6 @@ def goItaiMode(triangle,x,y,total,highestTotal):
         total+=triangle[x][y]
     if x == 14:
         if total>highestTotal[0]:
-            print('test')
             highestTotal[0]=total
     else:
         x+=1
