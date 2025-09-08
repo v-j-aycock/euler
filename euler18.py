@@ -2,14 +2,14 @@ triangle=[[75],[95,64],[17,47,82],[18,35,87,10],[20,4,82,47,65],[19,1,23,75,3,34
 x=0
 y=0
 total=0
-highestTotal=0
+highestTotal=[0]
 def goItaiMode(triangle,x,y,total,highestTotal):
     if x < 15:
         total+=triangle[x][y]
     if x == 14:
-        if total>highestTotal:
+        if total>highestTotal[0]:
             print('test')
-            highestTotal=total
+            highestTotal[0]=total
     else:
         x+=1
         goItaiMode(triangle,x,y,total,highestTotal)
