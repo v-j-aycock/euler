@@ -10,10 +10,10 @@ def goItaiMode(triangle,x,y,total,highestTotal):
         if total>highestTotal:
             print('test')
             highestTotal=total
-            print(highestTotal)
     else:
         x+=1
         goItaiMode(triangle,x,y,total,highestTotal)
         y+=1
         goItaiMode(triangle,x,y,total,highestTotal)
 goItaiMode(triangle,x,y,total,highestTotal)
+print(highestTotal)
