@@ -1,3 +1,5 @@
+from time import perf_counter
+start = perf_counter()
 import math
 #setting initial variables, targetNum is the number of factors we're looking for, n as in "nth triangular number".
 targetNum = int(input())
@@ -17,3 +19,5 @@ while len(listFactors) < targetNum:
     n+=1
 print(triangle)
 print(listFactors)
+stop = perf_counter()
+print(f"{stop-start:.7f}")

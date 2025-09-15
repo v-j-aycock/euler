@@ -1,3 +1,5 @@
+from time import perf_counter
+start = perf_counter()
 #set variables
 year = 1900
 sunNum=0
@@ -60,3 +62,5 @@ while year <= 2000:
                     day=0
     year+=1
 print(sunNum)
+stop = perf_counter()
+print(f"{stop-start:.7f}")
